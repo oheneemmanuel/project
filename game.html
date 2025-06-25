@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playverse - Play and Compete!</title>
+
+  <!-- SEO and Social Sharing Meta Tags -->
+  <meta name="description" content="Join Playverse and enjoy exciting games. Get rewards, compete on the leaderboard, and win big with commission-based rewards!" />
+  <meta property="og:title" content="Playverse - Play and Compete!" />
+  <meta property="og:description" content="Join Playverse and enjoy exciting games. Get rewards, compete on the leaderboard and win big with commission-based rewards!" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Playverse" />
+  <meta property="og:url" content="https://yourwebsite.com/playverse" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://yourwebsite.com/playverse" />
+  <link rel="icon" href="https://via.placeholder.com/32.png?text=P" type="image/png">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="styles/game.css">
+  <script src="script/game.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Your custom CSS file (if any) -->
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+
+<body>
+  <!-- Logo Section -->
+  <div class="logo-container">
+    <div class="esoteric-symbol">
+      <svg viewBox="0 0 100 100" width="60" height="60">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="2" />
+        <path d="M50 30 Q50 45, 65 50 Q50 55, 50 70 Q50 55, 35 50 Q50 45, 50 30" fill="#4CAF50" stroke="#fff" stroke-width="1.5" />
+        <circle cx="50" cy="50" r="15" fill="none" stroke="#fff" stroke-width="1.5" />
+        <path d="M50 35 L65 65 L35 65 Z" fill="none" stroke="#fff" stroke-width="1.5" />
+        <g stroke="#fff" stroke-width="1.5">
+          <line x1="50" y1="5" x2="50" y2="15" />
+          <line x1="85" y1="50" x2="95" y2="50" />
+          <line x1="50" y1="85" x2="50" y2="95" />
+          <line x1="5" y1="50" x2="15" y2="50" />
+          <line x1="73" y1="73" x2="80" y2="80" />
+          <line x1="27" y1="73" x2="20" y2="80" />
+          <line x1="73" y1="27" x2="80" y2="20" />
+          <line x1="27" y1="27" x2="20" y2="20" />
+        </g>
+      </svg>
+    </div>
+    <div class="logo-text">Playverse</div>
+  </div>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="#user-profile"><i class="fas fa-user"></i> Profile</a>
+      <a href="#spin-wheel"><i class="fas fa-sync-alt"></i> Spin</a>
+      <a href="#game-list"><i class="fas fa-gamepad"></i> Games</a>
+      <a href="#leaderboard"><i class="fas fa-trophy"></i> Leaderboard</a>
+      <a href="#messages"><i class="fas fa-envelope"></i> Messages</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Profile Section -->
+    <section id="user-profile" class="section">
+      <div class="profile-header">
+        <h2>Your Profile</h2>
+        <button id="edit-profile">Edit Profile</button>
+      </div>
+      <div id="profile-customization">
+        <label for="profile-theme">Choose Theme:</label>
+        <select id="profile-theme">
+          <option value="default">Default</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+        <button id="save-profile-changes">Save Changes</button>
+      </div>
+      <ul>
+        <li><strong>Top Score:</strong> <span id="top-score">2000</span></li>
+        <li><strong>Games Won:</strong> <span id="games-won">50</span></li>
+        <li><strong>Balance:</strong> $<span id="balance">100</span></li>
+      </ul>
+      <div id="achievements-list">
+        <h3>Achievements</h3>
+      </div>
+      <div class="profile-actions">
+        <button id="recharge-btn">Recharge</button>
+        <button id="cashout-btn">Cash Out</button>
+      </div>
+    </section>
+
+    <!-- Bet Section -->
+    <section class="section">
+      <h2>Place a Bet</h2>
+      <div>
+        <label for="bet-amount">Enter Bet Amount:</label>
+        <input type="number" id="bet-amount" placeholder="Enter Bet Amount">
+        <button id="place-bet">Place Bet</button>
+      </div>
+    </section>
+
+    <!-- Spin the Wheel Section -->
+    <section class="section" id="spin-wheel">
+      <h2>Spin the Wheel for Rewards!</h2>
+      
+      <div id="wheel">
+        <div class="wheel-section">5 Coins</div>
+        <div class="wheel-section">10 Coins</div>
+        <div class="wheel-section">Free Game</div>
+        <div class="wheel-section">20 Coins</div>
+        <div class="wheel-section">Small Prize</div>
+        <div class="wheel-section">No Prize</div>
+      </div>
+      <button id="spin-btn">Spin the Wheel</button>
+    </section>
+
+    <!-- Game List Section -->
+    <section class="section" id="game-list">
+      <h2>Games Available</h2>
+      <div class="games-container"></div>
+    
+    </section>
+
+    <!-- Friend List Section -->
+    <section class="section">
+      <h2>Friends</h2>
+      <ul class="friend-list" id="friend-list"></ul>
+      <input type="text" id="add-friend-input" placeholder="Enter Username">
+      <button id="add-friend-btn">Add Friend</button>
+    </section>
+
+    <!-- Messages Section -->
+    <section class="section" id="messages">
+      <h2>Your Messages</h2>
+      <ul class="messages-list" id="messages-list"></ul>
+      <textarea class="message-input" id="message-input" placeholder="Type a message..."></textarea>
+      <input type="file" id="file-upload" accept="image/*,video/*">
+      <button id="send-message">Send Message</button>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="section" id="leaderboard">
+      <h2>Leaderboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Top Score</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <!-- Leaderboard data will be populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Confetti Container -->
+  <div id="confetti-container"></div>
+
+  <!-- Notification Element -->
+  <div id="notification" class="notification"></div>
+
+  <!-- Audio for Sound Effects -->
+  <audio id="spin-sound" src="https://assets.mixkit.co/active_storage/sfx/2993/2993-preview.mp3"></audio>
+  <audio id="win-sound" src="https://assets.mixkit.co/active_storage/sfx/2763/2763-preview.mp3"></audio>
+
+  <!-- Optional Analytics Script (Placeholder) -->
+  <!-- <script src="path/to/analytics.js"></script> -->
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Playverse. All rights reserved.</p>
+  </footer>
+
+  <!-- Your custom JS files here -->
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
