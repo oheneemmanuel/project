@@ -1,0 +1,50 @@
+@media  screen and (min-width: 650px) {
+    #menu{
+        display: none;
+    }
+    .h-socials {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .h-socials img:hover{
+        transform: translateY(-4px);
+      
+    }
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+
+    }
+    nav ul li a {
+        padding: 1rem;
+        margin: .5rem;
+    }
+    nav ul li a:hover {
+        background: white;
+        color: black;
+        border-radius: 1rem;
+        transition: 0.3s ease-in-out;
+    }
+    .hero-buttons {
+
+        display: flex;
+    }
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  
+    
+
+}
