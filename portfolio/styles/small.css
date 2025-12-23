@@ -9,12 +9,17 @@ html{
     overflow-x: hidden;
 }
 body{
-    background: rgb(11, 11, 34);
+    background: #0d1321;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-}
+    line-height: 1.5;
+    color: #f8fafc;
 
+}
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 .container {
     display: flex;
     
@@ -44,9 +49,8 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    background: rgb(11, 11, 34);
     width: 100%;
-    margin-left: 17rem;
+    margin-left: 8rem;
 }
 nav ul li a {
     text-decoration: none;
@@ -65,7 +69,7 @@ nav.show {
     margin-top: 6rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
 }
 .hero-img img {
@@ -77,12 +81,15 @@ nav.show {
 .hero-text {
     color: white;
     margin: 1rem;
+    border: 1px groove #374151;
+    border-radius: 1rem;
+    background-color: #1b2438;
 }
 .hero-buttons {
     margin-top: 3rem;
     display: grid;
     gap: 1rem;
-    align-self: center;
+    align-items: center;
     justify-items: center;
 
 }
@@ -114,6 +121,53 @@ nav.show {
   background: #2563eb;
   color: white;
 }
+h1, h2 {
+    text-align: center;
+    margin-top: 2rem;
+    
+}
+h2{
+    text-decoration: underline;
+}
+.projects-container {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+   justify-items: center;
+}
+.project-card {
+    background: #1e293b;
+    padding: .5rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 100%;
+}
+    
+
+.project-card img {
+    height: 200px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    width: 100%;
+}
+.project-card .tech {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #2bb673;
+  font-weight: 500;
+}
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+h3{
+    text-decoration: underline;
+}
+
 
 footer {
     display: grid;
@@ -129,6 +183,9 @@ footer {
 footer h4{
     margin-bottom: 1rem;
 }
+footer .socials, .contact {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 .socials img:hover{
     transform: translateY(-4px);
 }
@@ -138,7 +195,8 @@ footer h4{
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4 1fr);
-    gap: .5rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .footer-links a {
     color: #e5e7eb;
