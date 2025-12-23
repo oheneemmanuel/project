@@ -17,12 +17,19 @@
         align-items: center;
     }
     nav {
-        display: block;
+       position: static;
+       transform: translateX(0);
+       width: auto;
+       max-width: none;
+       height: auto;
+       background: none;
+       padding: 0;
+        
     }
 
     nav ul {
-        align-items: center;
-        justify-content: center;
+    
+        justify-content: flex-start;
         flex-direction: row;
         margin: 0;
 
