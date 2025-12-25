@@ -15,7 +15,9 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: sticky;
     }
+    
     nav {
        position: static;
        transform: translateX(0);
@@ -29,20 +31,34 @@
 
     nav ul {
     
-        justify-content: flex-start;
+        display: flex;
         flex-direction: row;
-        margin: 0;
-
+        overflow: none;
+        position: static;
+        transform: translateX(0);
+        width: auto;
+        max-width: none;
+        height: auto;
+        background: none;
+        padding: 0;
     }
     nav ul li a {
         padding: 1rem;
         margin: .5rem;
     }
-    nav ul li a:hover {
-        background: white;
-        color: black;
-        border-radius: 1rem;
-        transition: 0.3s ease-in-out;
+    .animate-me:hover, .animate-me a.active {
+        background: #04AA6D;
+        color: #fff;
+    }
+
+    .nav-profile {
+        display: none;
+    }
+    .nav-skills{
+        display: none;
+    }
+    .nav-cta {
+        display: none;
     }
     .hero-buttons {
 
@@ -57,8 +73,21 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: left;
+    }
+    footer .footer-skills h4, span {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .footer-skills{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
     footer{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
   
     

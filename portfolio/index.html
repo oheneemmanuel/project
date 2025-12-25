@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emmanuel's Portfolio | Home Page</title>
-  <meta name="description" content="Homepage for Remmadent toothpaste  bright smiles, bold confidence." />
+  <meta name="description" content="A portfolio website to show my skills and abilities" />
   <meta name="author" content="Ohene Emmanuel Kwakye" />
   <meta name="theme-color" content="#2BB673" />
   
@@ -31,37 +31,40 @@
 </head>
 <body>
   <header>
-   
-    <section class="nav-container">
-      <button id="menu"></button>
 
-      <nav id="animate-me">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Projects</a></li>
-         
   
-        </ul>
-      </nav>
-    
-    
-    </section>
-    <div class="h-socials">
+    <button id="menu"></button>
+    <nav id="animate-me" aria-label="primary navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+      <div class="nav-profile">
+        <img src="images/port1.jpeg" alt="Ohene Emmanuel" class="nav-avatar">
 
-    
+        <h3>Ohene Emmanuel</h3>
+        <p>Frontend Developer</p>
+        <p>Sunyani, Ghana</p>
+      </div>
+      <div class="nav-skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+      </div>
+      <div>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
+
+    </nav>
+    <div class="h-socials">
       <a href="https://www.facebook.com/share/1D9XNxUeKi/"><img src="images/fb.png" alt="Facebook" width="30" height="30" /></a>
       <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter" width="30" height="30" /></a>
       <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30" /></a>
       <a href="https://github.com/oheneemmanuel"><img src="images/github.png" alt="Github" width="30" height="30" /></a>
     </div>
   </header>
- 
-  
- 
-   
- 
   <main>
     <section class="hero-container">
       <div class="hero-img">
@@ -69,11 +72,12 @@
       </div>
       <div class="hero-text">
         <h1>Ohene Emmanuel Kwakye</h1>
+        <span>Software Developer</span>
         <p>Welcome to my portfolio website. Explore my projects and get to know more about me.</p><br>
         <p>Web Developer | HTML • CSS • JavaScript</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+          <a href="#contact" class="btn secondary">Hire Me !</a>
         </div>
       </div>
      
@@ -121,6 +125,32 @@
       </div>
     </section>
 
+    <section class="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="about-img">
+          <img src="images/computer.jpg" alt="About Me">
+        </div>
+        <div class="about-text">
+          <p>
+            I am an aspiring web developer passionate about building clean, responsive,
+            and user-friendly websites. I enjoy turning ideas into real projects using
+            HTML, CSS, and JavaScript.
+          </p>
+          <p>
+            This portfolio is a place where I share my projects, practice new skills,
+            and track my growth as a developer. I am constantly learning and improving,
+            one line of code at a time.
+          </p>
+          <p>
+            When I am not coding, I enjoy exploring new technologies, solving problems,
+            and working on creative ideas.
+          </p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer>
     <div class="contact">
@@ -138,7 +168,8 @@
       <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30" /></a>
       <a href="https://github.com/oheneemmanuel"><img src="images/github.png" alt="Github" width="30" height="30" /></a>
     </div>
-    
+    <div>
+      <h4>Quick Links</h4>
       <ul class="footer-links">
        
         <a href="#home">Home</a>
@@ -146,6 +177,13 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </ul>
+    </div>
+    <div class="footer-skills">
+      <h4>Skills</h4>      
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
     </div>
     <div class="last-item">
      

@@ -10,31 +10,29 @@ html{
     overflow-x: hidden;
 }
 body{
+    font-family: "Source Sans Pro",sans-serif;
     background: #0d1321;
     width: 100%;
+    margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
     line-height: 1.5;
     color: #f8fafc;
-
+    
 }
 header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    position: relative;
+    background-color: #1e40af;
 }
-.container {
-    display: flex;
-    
-    align-items: center;
-}
+
 #menu {
+    top: 0;
     position: absolute;
     right: 0;
     margin-right: 1rem;
-    margin-top: 1rem;
-    top: 1rem;
+
     padding: .5rem;
-    z-index: 2000;
+    z-index: 9999;
 }
 #menu::before{
     content: "☰";
@@ -42,41 +40,100 @@ header {
 #menu.show::before {
     content: '❌';
 }
-nav {
+header{
     display: flex;
-    justify-content: flex-start;
-    right: 0;
-    top: 1rem;
-    height: 100vh;
-    width: 50%;
-    max-width: 320px;
     position: fixed;
-    transform: translateX(100%);
-    transition: transform 0.35s ease;
-    z-index: 900;
-    padding: 2rem;
-    background: #1b2438;
-    cursor: pointer;
-    
+    width: 100%;
+    background-color: #1e40af;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #111827;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1500;
+    padding: 12px 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 nav ul {
-    list-style: none;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    gap: 12px;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+    
 }
-nav ul li a {
+
+nav a {
     text-decoration: none;
     color: white;
-    padding: 1rem;
     display: block;
+    padding: 10px 12px;
+}
+
+nav a:hover, nav a.active {
+  background: #04AA6D;
+  color: #fff;
 }
 nav.show {
     transform: translateX(0);
-   
-
 }
+
+
+
+/* PROFILE INFO */
+.nav-profile {
+  margin-top: auto;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.nav-profile h3 {
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.nav-profile p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.nav-profile {
+  margin-bottom: 2rem;
+  color: white;
+}
+.nav-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.nav-skills span {
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 4px;
+}
+.nav-cta {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-profile p {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
 
 
 .hero-container {
@@ -109,6 +166,12 @@ nav.show {
     justify-items: center;
 
 }
+.hero-text span{
+    font-size: 1.2rem;
+    color: #3b82f6;
+    font-weight: 500;
+    text-align: center;
+}
 .btn {
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -119,7 +182,7 @@ nav.show {
 }
 
 .primary {
-  background: #2563eb;
+  border: 2px solid #2563eb; 
   color: white;
 }
 
@@ -129,7 +192,7 @@ nav.show {
 
 .secondary {
   border: 2px solid #2563eb;
-  color: #2563eb;
+  color: white;
   margin-left: 1rem;
 }
 
@@ -142,7 +205,7 @@ h1, h2 {
     margin-top: 2rem;
     
 }
-h2{
+h2, h4{
     text-decoration: underline;
 }
 .projects-container {
@@ -151,6 +214,7 @@ h2{
     gap: 2rem;
     grid-template-columns: 1fr;
    justify-items: center;
+   overflow: hidden;
 }
 .project-card {
     background: #1e293b;
@@ -158,6 +222,7 @@ h2{
     border-radius: 1rem;
     text-align: center;
     width: 100%;
+    overflow: hidden;
 }
     
 
@@ -167,16 +232,18 @@ h2{
     margin-bottom: 1rem;
     object-fit: cover;
     width: 100%;
+   
 }
 .project-card img:hover{
     transform: translateY(-4px);
+ 
 }
 .project-card .tech {
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: #2bb673;
+  color: #77ee16;
   font-weight: 500;
 }
 .project-card p {
@@ -191,7 +258,7 @@ h2{
     border-radius: .5rem;
     padding: .4rem;
     margin-top: 2rem;
-    background: navy;
+   
 }
 .project-card a:hover {
     transform: translateY(-4px);
@@ -200,7 +267,48 @@ h2{
 h3{
     text-decoration: underline;
 }
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 2rem;
+ 
+}
+.about-container img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+.about-text {
+    color: white;
+    border: 1px groove #374151;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #1b2438;
+    text-align: center;
+    
+}
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 1rem;
 
+}
+.about-text a {
+    color: white;
+    text-decoration: underline;
+   
+    padding: .2rem;
+    margin-top: 5rem;
+}
+
+.about-text a:hover {
+    background: #3b82f6;
+}
 
 footer {
     display: grid;
@@ -223,7 +331,10 @@ footer .socials, .contact {
     transform: translateY(-4px);
 }
 .h-socials {
-    display: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
 }
 footer .footer-links  {
     display: grid;
@@ -241,6 +352,9 @@ footer .footer-links  {
 footer .last-item {
     grid-column: 1 / -1;
     text-align: center;
+}
+footer .footer-skills h4, span{
+    display: none;
 }
 .last-item p {
     margin: 0;
