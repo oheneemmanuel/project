@@ -4,8 +4,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emmanuel's Portfolio | Home Page</title>
-  <meta name="description" content="A portfolio website to show my skills and abilities" />
+  <title>Emmanuel's Portfolio |Contact Page</title>
+  <meta name="description" content="A portfolio contact page where people can reach out to me." />
   <meta name="author" content="Ohene Emmanuel Kwakye" />
   <meta name="theme-color" content="#2BB673" />
   
@@ -33,15 +33,15 @@
   <header>
 
   
-    <button id="menu"></button>
+    <button id="menu" aria-label="menu-bar"></button>
     <nav id="animate-me" aria-label="primary navigation">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="#">Projects</a></li>
       </ul>
       <div class="nav-profile">
-        <img src="images/port1.jpeg" alt="image of Ohene Emmanuel" class="nav-avatar">
+        <img src="images/port1.jpeg" alt="Ohene Emmanuel" class="nav-avatar">
 
         <h3>Ohene Emmanuel</h3>
         <p>Frontend Developer</p>
@@ -62,97 +62,53 @@
     <div class="h-socials">
       <a href="https://www.facebook.com/share/1D9XNxUeKi/"><img src="images/fb.png" alt="Facebook" width="30" height="30" /></a>
       <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter" width="30" height="30" /></a>
-      <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30"/></a>
+      <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30" /></a>
       <a href="https://www.instagram.com/lilstains_24?igsh=MXA5eDAxZDU2MmNqcA=="><img src="images/ig.png" alt="Instagram" width="30" height="30"/></a>
       <a href="https://github.com/oheneemmanuel"><img src="images/github.png" alt="Github" width="30" height="30" /></a>
     </div>
   </header>
   <main>
-    <section class="hero-container">
-      <div class="hero-img">
-          <img src="images/port1.jpeg" alt="hero image" loading="lazy">
-      </div>
-      <div class="hero-text">
-        <h1>Ohene Emmanuel Kwakye</h1>
-        <span>Software Developer</span>
-        <p>Welcome to my portfolio website. Explore my projects and get to know more about me.</p><br>
-        <p>Web Developer | HTML • CSS • JavaScript</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn primary">View Projects</a>
-          <a href="contact.html" class="btn secondary">Hire Me !</a>
+    <section class="contact-hero">
+        <div class="contact-hero-text">
+            <h1>Get in Touch</h1>
+            <p>If you have any questions, projects, collaboration or just want to say hello, feel free to reach out!. I love to hear from you.</p>
         </div>
-      </div>
-     
-
-    
-    
- 
     </section>
-    <section id="projects">
+    <section class="contact-section">
+        <div id="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong></p>
+            <a href="mailto:ohenekwakye24@gmail.com">ohenekwakye24@gmail.com</a>
+            <p><strong>Location:</strong>Sunyani Ghana</p>
+            <p><strong>Phone:</strong>+233 544 20 4625</p>
 
-      <h2>My Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="images/logo1.jpg" alt="logo of chamber of commerce page">
-          <h3>Chamber of Commerce</h3>
-          <p>
-            A community-focused web platform designed to connect local traders, promote businesses,
-            and encourage collaboration through shared opportunities and events.
-          </p>
-          <span class="tech">HTML • CSS • JavaScript</span>
-          <a href="https://oheneemmanuel.github.io/wdd231/chamber/index.html">View Live</a>
         </div>
-        <div class="project-card">
-          <img src="images/charger.webp" alt="logo of ride smart">
-          <h3>Ride Smart Rentals </h3>
-          <p>
-            A modern rental service website that simplifies transportation booking by allowing users
-            to explore vehicles, check availability, and rent with ease.
-          </p>
-          <span class="tech">HTML • CSS • JavaScript</span>
-          <a href="https://oheneemmanuel.github.io/wdd231/final-project/index.html">View Live</a>
-        </div>
-        <div class="project-card">
-          <img src="images/soccer.webp" alt="logo of soccer score page">
-          <h3>Soccer Scope </h3>
-          <p>
-            A sports information platform that provides users with access to football leagues,
-            teams, and match-related data in a clean and interactive interface.
-          </p>
-          <span class="tech">HTML • CSS • JavaScript • API </span>
 
-          <a href="https://oheneemmanuel.github.io/WDD-330/final-project/index.html">View Live</a>
+        <div id="social-links">
+            <h2>Follow Me</h2>
+            <a href="https://github.com/oheneemmanuel" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://twitter.com/" aria-label="Twitter">Twitter</a>
+            <a href="https://www.facebook.com/share/1D9XNxUeKi/" aria-label="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/lilstains_24?igsh=MXA5eDAxZDU2MmNqcA==" aria-label="Instagram">Instagram</a>
         </div>
-        
-      </div>
+   
+        <section class="form-page">
+            <h2>Send A Message</h2>
+            <form id="contact-form" action="thank-you.html" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <button id="submit-btn" type="submit">Send Message</button>
+            </form>
+        </section>
     </section>
-
-    <section class="about">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="about-img">
-          <img src="images/computer.jpg" alt="About Me">
-        </div>
-        <div class="about-text">
-          <p>
-            I am an aspiring web developer passionate about building clean, responsive,
-            and user-friendly websites. I enjoy turning ideas into real projects using
-            HTML, CSS, and JavaScript.
-          </p>
-          <p>
-            This portfolio is a place where I share my projects, practice new skills,
-            and track my growth as a developer. I am constantly learning and improving,
-            one line of code at a time.
-          </p>
-          <p>
-            When I am not coding, I enjoy exploring new technologies, solving problems,
-            and working on creative ideas.
-          </p>
-          <a href="#projects" class="btn">View My Work</a>
-        </div>
-      </div>
-    </section>
-
   </main>
   <footer>
     <div class="contact">

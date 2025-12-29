@@ -4,7 +4,7 @@
     }
     .h-socials {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 1rem;
     }
     .h-socials img:hover{
@@ -77,6 +77,16 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: left;
+    }
+    #contact-info, #social-links {
+        border-right: 4px solid rgba(98, 16, 16, 0.047);
+    }
+    .contact-section {
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 1rem;
+        height: 100%;
+        padding: 1rem;
+        
     }
     footer .footer-skills h4, span {
         display: flex;
