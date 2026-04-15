@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emmanuel's Portfolio | Projects Page</title>
+  <meta name="description" content="projects page to show the projects done so far"/>
+  <meta name="author" content="Ohene Emmanuel Kwakye"/>
+  <meta name="theme-color" content="#2BB673" />
+  
+  <!-- Fonts and Icons -->
+  <link rel="preload" href="fonts/Roboto.woff2" as="font" type="font/woff2" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  
+  <!-- Animation On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <link rel="stylesheet" href="styles/small.css"/>
+  <link rel="stylesheet" href="styles/large.css"/>
+
+  <!-- Scripts -->
+  <script type="module" src="scripts/pt.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => AOS.init());
+  </script>
+</head>
+<body>
+  <header>
+
+  
+    <button id="menu"></button>
+    <nav id="animate-me" aria-label="primary navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Projects</a></li>
+      </ul>
+      <div class="nav-profile">
+        <img src="images/port1.jpeg" alt="image of Ohene Emmanuel" class="nav-avatar">
+
+        <h3>Ohene Emmanuel</h3>
+        <p>Frontend Developer</p>
+        <p>Sunyani, Ghana</p>
+      </div>
+      <div class="nav-skills">
+        <h3>Skills</h3>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+      </div>
+      <div>
+        <a href="contact.html" class="nav-cta">Hire Me</a>
+      </div>
+
+    </nav>
+    <div class="h-socials">
+      <a href="https://www.facebook.com/share/1D9XNxUeKi/"><img src="images/fb.png" alt="Facebook" width="30" height="30" /></a>
+      <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter" width="30" height="30" /></a>
+      <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30"/></a>
+      <a href="https://www.instagram.com/lilstains_24?igsh=MXA5eDAxZDU2MmNqcA=="><img src="images/ig.png" alt="Instagram" width="30" height="30"/></a>
+      <a href="https://github.com/oheneemmanuel"><img src="images/github.png" alt="Github" width="30" height="30" /></a>
+    </div>
+  </header>
+  <main>
+    <section class="projects-intro">
+        <h1>My Projects</h1>
+        <p>
+            Here are some of the projects I have worked on. Each project showcases my skills in frontend development and my ability to create engaging user experiences.
+        </p>
+    </section>
+    <section class="projects-container">
+        <article class="project-card">
+            <figure class="project-image">
+                <img src="images/soccer.webp" alt="Soccer Scope web application preview">
+            </figure>
+            <div class="project-content">
+                <h2>Soccer Scope App</h2>
+                <p>
+                    A football web app that displays leagues, teams, and player details
+                    using API data with fallback dummy content.
+                </p>
+            </div>
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn">Live Demo</a>
+                <button class="learn-more">Learn more</button>
+            </div>
+            <dialog id="box"></dialog>
+        </article>
+      
+    </section>
+  </main>
+  <footer>
+    <div class="contact">
+      <h4>Contact</h4>
+      <p>Penkwasi, Sunyani, Bono Region</p>
+      <p>Email: ohenekwakye24@gmail.com</p>
+      <p>Phone: +233 544 20 4625</p>
+    </div>
+   
+
+    <div class="socials">
+      <h4>Follow me</h4>
+      <a href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook" width="30" height="30"/></a>
+      <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter" width="30" height="30"/></a>
+      <a href="https://www.linkedin.com/in/emmanuel-ohene-kwakye-7b9ab631a"><img src="images/li.png" alt="LinkedIn" width="30" height="30" /></a>
+      <a href="https://www.instagram.com/lilstains_24?igsh=MXA5eDAxZDU2MmNqcA=="><img src="images/ig.png" alt="Instagram" width="30" height="30"/></a>
+      <a href="https://github.com/oheneemmanuel"><img src="images/github.png" alt="Github" width="30" height="30" /></a>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+       
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </ul>
+    </div>
+    <div class="footer-skills">
+      <h4>Skills</h4>      
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+    </div>
+    <div class="last-item">
+     
+      <p>&copy; Ohene Emmanuel Kwakye, Ghana. All rights reserved.</p>
+      
+    </div>
+  </footer>
+ 
+      
+</body>
+</html>
