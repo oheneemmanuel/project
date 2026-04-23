@@ -729,13 +729,16 @@ footer p, footer a {
   color: #2BB673;
   letter-spacing: 0.05em;
 }
-.projects-carousel { width: 100%; }
-.track-outer { overflow: hidden; border-radius: 12px; }
-.track { display: flex; transition: transform 0.4s cubic-bezier(.4,0,.2,1); }
+.projects-carousel { width: 100%; overflow: hidden; }
+.track-outer { overflow: hidden; border-radius: 12px; width: 100%;}
+.track { display: flex; transition: transform 0.4s cubic-bezier(.4,0,.2,1); will-change: transform;}
 .slide {
   min-width: 100%; 
   display: flex;
   justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+
 }
 
 .nav-row { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
