@@ -28,6 +28,42 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
 
     });
+    const track = document.getElementById('track');
+    const slides = track.querySelectorAll('.slide');
+    const total = slides.length;
+    const dotsEl = document.getElementById('dots');
+    let cur = 0;
+    
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => go(i));
+      dotsEl.appendChild(d);
+    }
+    
+    function go(n) {
+      cur = (n + total) % total;
+      track.style.transform = `translateX(-${cur * 100}%)`;
+      dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+    }
+    
+    document.getElementById('prev').addEventListener('click', () => go(cur - 1));
+    document.getElementById('next').addEventListener('click', () => go(cur + 1));
+    
+    // Swipe support
+    let startX = 0;
+    const outer = document.getElementById('trackOuter');
+    outer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    outer.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+    
+    // Keyboard support
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(cur - 1);
+      if (e.key === 'ArrowRight') go(cur + 1);
+    });
 
 
 

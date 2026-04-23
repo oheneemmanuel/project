@@ -232,6 +232,7 @@ nav ul {
   gap: 40px;
   padding-top: 160px;
   padding-bottom: 80px;
+  text-align: center; 
 }
 .hero-text {
   flex: 1;
@@ -700,5 +701,64 @@ footer p, footer a {
   border-top: 1px solid rgba(255,255,255,0.08);
   color: #4B5563;
   font-size: 0.82rem;
+}
+
+/* --- projects page styles — projects.css --- */
+.projects-intro {
+  text-align: center;
+  
+}
+
+.projects-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #2BB673;
+}
+
+.projects-intro p {
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #555;
+}
+
+.projects-tagline {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #2BB673;
+  letter-spacing: 0.05em;
+}
+.projects-carousel { width: 100%; }
+.track-outer { overflow: hidden; border-radius: 12px; }
+.track { display: flex; transition: transform 0.4s cubic-bezier(.4,0,.2,1); }
+.slide {
+  min-width: 100%; 
+  display: flex;
+  justify-content: center;
+}
+
+.nav-row { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
+.nav-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #ccc; background: #fff; cursor: pointer; font-size: 18px; }
+.nav-btn:hover { background: #f0f0f0; }
+
+.dots { display: flex; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; cursor: pointer; transition: all 0.2s; }
+.dot.active { background: #2BB673; width: 20px; border-radius: 99px; }
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+  object-fit: cover;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  object-position: center;
+  display: block;
 }
 

@@ -71,29 +71,86 @@
     <section class="projects-intro">
         <h1>My Projects</h1>
         <p>
-            Here are some of the projects I have worked on. Each project showcases my skills in frontend development and my ability to create engaging user experiences.
+
+          I build things for the web — clean, responsive, and user-friendly. 
+          Below is a collection of projects where I've turned ideas into 
+          real digital experiences using HTML, CSS, JavaScript, and React.
+          Each one reflects my passion for thoughtful frontend development 
+          and attention to detail.
+            
         </p>
+        <span class="projects-tagline">Scroll through & explore ↓</span>
     </section>
-    <section class="projects-container">
-        <article class="project-card">
-            <figure class="project-image">
-                <img src="images/soccer.webp" alt="Soccer Scope web application preview">
-            </figure>
-            <div class="project-content">
+    <section class="projects-carousel">
+      <div class="track-outer" id="trackOuter">
+        <div class="track" id="track">
+        
+          <!-- Each project is a .slide -->
+          <div class="slide">
+            <article class="project-card">
+              <figure class="project-image">
+                <img src="images/soccer.webp" alt="Soccer Scope App">
+              </figure>
+              <div class="project-content">
                 <h2>Soccer Scope App</h2>
+                <p>A football web app that displays leagues, teams, and player details using API data with fallback dummy content.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://oheneemmanuel.github.io/WDD-330/final-project/index.html" class="btn">Live Demo</a>
+                
+              </div>
+            </article>
+          </div>
+          <div class="slide">
+            <article class="project-card">
+              <figure class="project-image">
+                <img src="images/logo1.jpg" alt="Chamber Of Commerce">
+              </figure>
+              <div class="project-content">
+                <h2>Chamber Of Commerce</h2>
                 <p>
-                    A football web app that displays leagues, teams, and player details
-                    using API data with fallback dummy content.
+                  A community-focused web platform designed to connect local traders, promote businesses,
+                  and encourage collaboration through shared opportunities and events
+                .</p>
+              </div>
+              <div class="project-links">
+                <a href="https://oheneemmanuel.github.io/wdd231/chamber/index.html" class="btn">Live Demo</a>
+              
+              </div>
+            </article>
+          </div>
+            <div class="slide">
+            <article class="project-card">
+              <figure class="project-image">
+                <img src="images/charger.webp" alt="logo of Ride Smart Rentals">
+              </figure>
+              <div class="project-content">
+                <h2>Ride Smart Rentals</h2>
+                <p>
+                  A modern rental service website that simplifies transportation booking by allowing users
+                  to explore vehicles, check availability, and rent with ease.
                 </p>
-            </div>
-            <div class="project-links">
-                <a href="#" target="_blank" class="btn">Live Demo</a>
-                <button class="learn-more">Learn more</button>
-            </div>
-            <dialog id="box"></dialog>
-        </article>
-      
+              </div>
+              <div class="project-links">
+                <a href="https://oheneemmanuel.github.io/wdd231/final-project/index.html" class="btn">Live Demo</a>
+               
+              </div>
+            </article>
+          </div>
+        
+          <!-- Add more .slide wrappers for future projects -->
+        
+        </div>
+      </div>
+    
+      <div class="nav-row">
+        <button class="nav-btn" id="prev" aria-label="Previous project">&#8592;</button>
+        <div class="dots" id="dots"></div>
+        <button class="nav-btn" id="next" aria-label="Next project">&#8594;</button>
+      </div>
     </section>
+
+
   </main>
   <footer>
     <div class="contact">
