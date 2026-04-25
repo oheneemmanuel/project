@@ -67,7 +67,7 @@ h2::after {
   transform: translateX(-50%);
 }
 .btn {
-  display: inline-block;
+  display: block;
   padding: 12px 28px;
   border-radius: 50px;
   font-weight: 500;
@@ -94,7 +94,9 @@ h2::after {
   background-color: var(--accent-color);
   color: var(--white);
   transform: translateY(-3px);
+
 }
+
 /* --- HEADER & NAVIGATION --- */
 header {
   background: rgba(255, 255, 255, 0.438);
@@ -196,7 +198,7 @@ nav ul {
 .nav-cta {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 8px 16px;
+  padding: 8px 10px;
   border-radius: 20px;
   font-weight: 500;
 }
@@ -337,20 +339,40 @@ nav ul {
 .about {
   background-color: var(--bg-mint);
   max-width: 100%;
-}
-.about-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  flex-direction: column;
+  text-align: center;
 }
+
 .about-text {
   flex: 1;
 }
 .about-text p {
   margin-bottom: 20px;
   color: var(--text-light);
+}
+.btn-about  {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display : inline-block;
+  margin-top: 20px;
+}
+.btn-about:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(43, 182, 115, 0.4);
+}
+.btn-about a {
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+ 
 }
 /* --- FOOTER --- */
 footer {
