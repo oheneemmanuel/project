@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Basics -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Ossa Dashboard | Home Page</title>
+  <meta name="description" content="Home page for Ossa association showing important information"/>
+  <meta name="author" content="Ohene Emmanuel Kwakye"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ossa" />
+  <meta property="og:description" content="A home page for Ossa" />
+  <meta property="og:image" content="https://oheneemmanuel.github.io/WDD-330/final-project/image/soccer.webp"/>
+  <meta property="og:url" content="https://oheneemmanuel.github.io/WDD330/final-project/index.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Ossa"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="stlyes/small.css" />
+  <link rel="stylesheet" href="stlyes/large.css" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth@0,99.7;1,99.7&display=swap" rel="stylesheet" />
+
+  <!-- JS -->
+  <script type="module" src="script/home.js"></script>
+</head>
+
+<body>
+    <header class="mobile-header">
+        
+        <span class="logo-icon"><i class="fas fa-graduation-cap" aria-hidden="true">OSSA ADMIN</i></span>
+        <button id="menu-bar" aria-label="menu-bar"></button>
+    </header>
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                <span>OSSA Admin</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Resources</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    
+                    <li class="nav-separator"></li>
+                    <li class="nav-user">
+                        <a href="#"><i class="fas fa-user-circle"></i> Ohene Emmanuel</a>
+                    
+                    </li>
+                    <li class="login">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard Overview</h1>
+                <div class="user-profile">
+                    <img src="images/port1.jpeg" alt="User Avatar" class="avatar">
+                    
+                </div>
+                <div class="header-actions">
+                    <a class="btn" href="#"><i class="fas fa-bell"></i></a>
+                    <a class="btn" href="register.html"><i class="fas fa-user-plus"></i>Join</a>
+                </div>
+            </header>
+
+            <section class="dashboard-content">
+                <div class="dashboard-card">
+                    <h2><i class="fas fa-users"></i> Total Members</h2>
+                    <p>60</p>
+                </div>
+                <div class="dashboard-card">
+                    <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+                    <p>3</p>
+                </div>
+                <div class="dashboard-card">
+                    <h2>Resources Available</h2>
+                    <p>20</p>
+                </div>
+                
+                <div class="dashbord-main-grid">
+                    <div class="info-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-bullhorn"></i>Latest Announcement</h3>
+                            <button class="btn-text">View All</button>
+                        </div>
+                    
+
+                        <div class="announcement-list">
+                            <div class="announcement-item">
+                                <h4>Annual General Meeting</h4>
+                                <p>Join us for our annual general meeting on December 15th at 5 PM.</p>
+                            </div>
+                            <div class="announcement-item">
+                                <h4>New Resource Library</h4>
+                                <p>We have added new resources to our library. Check them out!</p>
+                            </div>
+                            <div class="announcement-item">
+                                <h4>Volunteer Opportunities</h4>
+                                <p>
+                                    We are looking for volunteers for our upcoming events. Sign up today!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leadership-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-users-cog"></i>Executive Board</h3>
+                    </div>
+                    <div class="leader-list>">
+                        <div class="leader-item">
+                            <img src="images/port1.jpeg" alt="Leader Avatar" class="leader-avatar">
+                            <h4>Mr.A.Hayford</h4>
+                            <p>President</p>
+                        </div>
+                        <div class="leader-item">
+                            <img src="images/port1.jpeg" alt="Leader Avatar" class="leader-avatar">
+                            <h4>Mr.K.Emmanuel</h4>
+                            <p>V.President</p>
+                        </div>
+                        <div class="leader-item">
+                            <img src="images/port1.jpeg" alt="Leader Avatar" class="leader-avatar">
+                            <h4>Mr.A.Samuel</h4>
+                            <p>Secretary</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </section>
+            <footer>
+             
+                <p>&copy;<span id="currentyear"></span> Ohene Emmanuel Kwakye, Ghana. All rights reserved.</p>
+                <p id="LastModified"></p>
+            </footer>
+
+        </main>
+    </div>
+  
+
+ 
+</body>
+</html>

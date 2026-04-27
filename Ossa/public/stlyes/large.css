@@ -1,0 +1,58 @@
+@media  screen and (min-width: 768px) {
+    #menu-bar {
+        display: none;
+    }
+    html, body {
+        overflow: hidden;
+        height: 100vh;
+    }
+    .app-container {
+        display: flex; /* This puts sidebar and main side-by-side */
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: row; /* This makes the sidebar and main content sit next to each other */
+        align-items: stretch;
+    }
+    .sidebar {
+        position: static; /* Make sidebar part of the normal flow */
+        left: 0 !important;
+        width: 260px;
+        background-color: #0f172a; /* Dark navy */
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0) !important;
+        overflow-y: auto;
+    }
+    .main-content {
+        flex: 1; /* This tells the content to take up all remaining space */
+        background-color: #f8f9fa; /* Light gray background */
+        padding: 40px;
+        height: 100vh;
+        overflow-y: auto;
+        margin-top: 0;
+        display : flex;
+        flex-direction: column;
+    }
+    /*MOBILE HEADER BAR*/
+    .mobile-header {
+        display: none !important; /* Hide mobile header on larger screens */
+    }
+    /*NAVIGATION MENU*/
+    .nav-menu  a:hover {
+         text-decoration: underline;
+        
+
+    }
+    /*FOOTER*/
+    footer {
+        width: 100%;
+        margin-top: auto;
+        text-align: center;
+        padding: 40px 0 20px 0;
+        background-color: var(--primary-light);
+        color: var(--text);
+    
+    }
+}

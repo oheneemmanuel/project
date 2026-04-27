@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Basics -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Ossa Dashboard | Home Page</title>
+  <meta name="description" content="Home page for Ossa association showing important information"/>
+  <meta name="author" content="Ohene Emmanuel Kwakye"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ossa" />
+  <meta property="og:description" content="A home page for Ossa" />
+  <meta property="og:image" content="https://oheneemmanuel.github.io/WDD-330/final-project/image/soccer.webp"/>
+  <meta property="og:url" content="https://oheneemmanuel.github.io/WDD330/final-project/index.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Ossa"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="stlyes/small.css" />
+  <link rel="stylesheet" href="stlyes/form.css" />
+  <link rel="stylesheet" href="stlyes/large.css" />
+ 
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth@0,99.7;1,99.7&display=swap" rel="stylesheet" />
+
+  <!-- JS -->
+  <script type="module" src="script/home.js"></script>
+  <script type="module" src="script/register.js"></script>
+</head>
+
+<body>
+    <header class="mobile-header">
+        
+        <span class="logo-icon"><i class="fas fa-graduation-cap" aria-hidden="true">OSSA ADMIN</i></span>
+        <button id="menu-bar" aria-label="menu-bar"></button>
+    </header>
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                <span>OSSA Admin</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Resources</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    
+                    <li class="nav-separator"></li>
+                    <li class="nav-user">
+                        <a href="#"><i class="fas fa-user-circle"></i> Ohene Emmanuel</a>
+                    
+                    </li>
+                    <li class="login">
+                        <a href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+       <main class="main-content">
+            <div class="form-container">
+                <h2>Join the OSSA Community</h2>
+                <p>Enter your details to create an account</p>
+            
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="completionYear">Year of Completion</label>
+                        <select id="completionYear" name="completionYear" required>
+                            <option value="" disabled selected>Select your year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="location">Location (Current City)</label>
+                        <input type="text" id="location" name="location" placeholder="e.g. Sunyani, Ghana" required />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Min. 6 characters" required />
+                    </div>
+                
+                    <button type="submit" class="submit-btn">Create Account</button>
+
+                    <p class="form-footer">Already have an account? <a href="login.html">Login here</a></p>
+                </form>
+
+                <div id="message-box" class="hidden"></div>
+            </div>
+        </main>
+            
+
+
+
+        
+        
+           
+
+        </main>
+    </div>
+  
+
+ 
+</body>
+</html>
