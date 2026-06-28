@@ -41,3 +41,21 @@
 .submit-btn:hover {
     background-color: #34495e;
 }
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#password {
+    width: 100%;
+    padding-right: 40px; /* Make room so text doesn't overlap the icon */
+}
+
+#toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #666; /* Make sure the color isn't white on a white background! */
+    z-index: 10;
+}

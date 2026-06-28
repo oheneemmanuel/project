@@ -786,4 +786,21 @@ footer p, footer a {
   object-position: center;
   display: block;
 }
+/* THANK YOU PAGE /**/
+.thank-you-card {
+  margin-top: 7rem;
+  text-align: center;
+}
+#results {
+  margin-bottom: 20px;
+}
+
+.thank-you-actions {
+  margin-top: 2rem;
+}
+
+.thank-you-actions a {
+  text-decoration: underline;
+  cursor: pointer;
+}
 

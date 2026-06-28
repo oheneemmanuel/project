@@ -49,6 +49,7 @@ const createMember = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+// update a member
 
 const loginMember = async (req, res) => {
     try {
@@ -83,5 +84,36 @@ const loginMember = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+const resetPassword = async (req, res) => {
+    try {
+        const db = mongodb.getDatabase();
+        const { email, newPassword } = req.body;
+        // Basic validation
+        if (!email || !newPassword) {
+            return res.status(400).json({ message: 'Email and new password are required.' });
 
-module.exports = { createMember, loginMember };
+        }
+        // Find user by email
+        const user = await db.collection('users').findOne({ email: email.toLowerCase() });
+        if (!user) {
+            return res.status(400).json({ message: 'Email not found.' });
+        }
+        // Hash new password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(newPassword, salt);
+        // Update user's password
+        const result = await db.collection('users').updateOne(
+            { email: email.toLowerCase() },
+            { $set: { password: hashedPassword } }
+        );
+        if (result.modifiedCount === 0) {
+            return res.status(500).json({ message: 'Failed to update password.' });
+        }
+        res.status(200).json({ message: 'Password updated successfully.' });
+    } catch (error) {
+        console.error("Controller Error:", error);
+        res.status(500).json({ message: error.message });
+    }
+};
+
+module.exports = { createMember, loginMember, resetPassword };

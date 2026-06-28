@@ -5,6 +5,7 @@ const regisController = require('../controllers/auth'); // Path to your controll
 // This keeps your routes file very short and readable
 router.post('/register', regisController.createMember);
 router.post('/login', regisController.loginMember);
+router.patch('/forget', regisController.resetPassword);
 
 module.exports = router;
 
